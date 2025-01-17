@@ -34,6 +34,7 @@ const quiz = document.querySelector('.question-container');
 const nextBtn = document.querySelector('.nextBtn');
 const dialog = document.getElementById('confirmation');
 const hint = document.querySelector('.hint');
+const radios=document.querySelectorAll('input[name="hintConfirmation"]');
 
 // Function to initialize the game and keep everything encapsulated
 function createQuizGame() {
@@ -55,25 +56,24 @@ function createQuizGame() {
             hint.src = currentQuestion.imgSrc; // Update hint image
             const imgContainer = document.querySelector('.image-container');
             imgContainer.addEventListener('click', function () {
+
+               
                 dialog.showModal(); // Show the dialog on image click
 
-                const yesButton = document.getElementById('yes');
-                const noButton = document.getElementById('no');
-
-                // Handle the radio button clicks
-                yesButton.addEventListener('change', function () {
-                    if (yesButton.checked && hintCounter<=5) {
-                        hint.classList.remove("blur"); // Unblur hint image
-                        hintCounter++;
-                        dialog.close();
-                    }
+                radios.forEach((radio)=>{
+                    radio.checked = false; // Uncheck all radio buttons
+                    radio.disabled = false; // Enable radio buttons if previously disabled
+                      radio.addEventListener('change',function(e){
+                        
+                         if(e.target.value=="1") {
+                            hint.classList.remove('blur');
+                            hintCounter++;
+                           
+                         }
+                         dialog.close();
+                      });
                 });
-
-                noButton.addEventListener('change', function () {
-                    if (noButton.checked) {
-                        dialog.close();
-                    }
-                });
+                
             });
 
             const userAnswers = quiz.querySelectorAll('.user-answer');
