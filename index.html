@@ -70,12 +70,20 @@
     </div>
     <div class="container">
         <div class="image-container">
-           <img class="hint" src="images/021 - X-Ray Goggles.png">
+           <img class="hint blur" src="images/021 - X-Ray Goggles.png">
         </div>
         <div class="question-container">
           
         </div>
-        <button class="nextBtn">Next</button>
+        <img class="nextBtn" src="images/icons8-next.gif">
     </div>
+
+    <dialog id="confirmation">
+        <p>Are you sure you want to use your hint? If you do you will only have 2 left</p>
+        <label for="yes">yes</label>
+        <input type="radio" id="yes" name="hintConfirmation" value="1">
+        <label for="no">No</label>
+        <input type="radio" id="no" name="hintConfirmation" value="2">
+    </dialog>
 </body>
 </html>

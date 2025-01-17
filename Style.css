@@ -1,8 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nova+Cut&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html,body{
     margin:0;
     padding:0;
     box-sizing:border-box;
     background-color: black;
+    font-family: "Nova Cut", serif;
+  font-weight: 400;
+  font-style: normal;
     height:100%;
 
 }
@@ -25,7 +31,9 @@ body{
    
     z-index: 1;              
 }
- 
+ .nextBtn{
+    filter:invert(1);
+ }
 
 .greed4{height: 80px;}
 .greed1{ height: 50px;}
@@ -65,13 +73,13 @@ div.show{
 }
 
 .container > div{
-    border: 2px ridge white;
+    border: 2px ridge rgba(255, 255, 255, 0.136);
     
 }
 .container > div:nth-of-type(1){
     width: 30%;
     height: 80%;
-    background-color: rgb(12, 147, 10);
+    /*background-color: rgb(12, 147, 10);*/
     
 }
 
@@ -81,8 +89,20 @@ div.show{
     background-color: rgb(10, 10, 10);
 }
 
+.image-container > .hint.blur{
+    object-fit: cover;
+    height: 100%;
+    width:100%;
+    background-color: black;
+    filter:blur(50px);
+    
+}
+
 .image-container > .hint{
     object-fit: cover;
     height: 100%;
     width:100%;
+    background-color: black;
+    filter:blur(0px);
+
 }
