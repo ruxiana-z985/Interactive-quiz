@@ -18,6 +18,13 @@ let questions = [
         [`A) Dog`, `B) Cat`, `C) Ant`, `D) Bird`],
         2, "images/ant-1096401_1280.png"
     ),
+    new Question(`What triggers the change in Kurapika's eyes, and how does it affect his Nen abilities?`,
+        [`A) His eyes turn scarlet when he activates his Chain Jail ability, giving him enhanced strength.`,
+         `B) His eyes turn scarlet when he activates his Nen abilities, but only when he is near the Phantom Troupe.`,
+         `C) His eyes turn scarlet when he is overcome by emotions, enhancing his Nen abilities and giving him access to Emperor Time.`,
+         `D) His eyes turn scarlet when he uses his Judgment Chain ability, allowing him to access a temporary power boost.`],
+        0, `images/eye-3182216_1280.png`
+    )
 ];
 
 const startButton = document.getElementById('start-btn');
@@ -55,7 +62,7 @@ function createQuizGame() {
 
                 // Handle the radio button clicks
                 yesButton.addEventListener('change', function () {
-                    if (yesButton.checked && hintCounter<=3) {
+                    if (yesButton.checked && hintCounter<=5) {
                         hint.classList.remove("blur"); // Unblur hint image
                         hintCounter++;
                         dialog.close();

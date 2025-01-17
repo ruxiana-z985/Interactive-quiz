@@ -99,7 +99,7 @@ div.show{
 }
 
 .image-container > .hint{
-    object-fit: cover;
+    object-fit:cover;
     height: 100%;
     width:100%;
     background-color: black;
