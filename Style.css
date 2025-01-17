@@ -1,0 +1,87 @@
+html,body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    background-color: black;
+    height:100%;
+
+}
+body{
+    max-height:100vh;
+    overflow: hidden;
+}
+
+#start-container {
+    position: absolute;       /* Position relative to the nearest positioned ancestor */
+    top:0;                
+    left: 50%; 
+    transform: rotate(-10deg) translateX(-50%) translateY(-10%);  /* Center horizontally */
+    height: 100%;
+    max-width: 27%;           /* Set max-width of the container */
+    background-color: rgba(21, 185, 29, 0.104);
+    
+    padding: 20px;
+    box-sizing: border-box;
+   
+    z-index: 1;              
+}
+ 
+
+.greed4{height: 80px;}
+.greed1{ height: 50px;}
+.greed2{height: 90px;}
+.greed3{height: 80px;}
+#start-btn{
+    position: absolute;        /* Position the button relative to the container */
+    top: 50%;                    /* Position it at the top of the container */
+    left: 50%;                 /* Center horizontally */
+    transform: rotate(10deg) translateX(-50%);  /* Adjust back by 50% of the button’s width */
+    background-color: rgb(45, 224, 21);
+   
+    color: black;
+    width:500px;
+    height: 70px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;                /* Higher z-index to ensure button appears on top */
+}
+div.hide{
+   display:none;
+}
+div.show{
+    display:flex;
+}
+.container{
+    display:none;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    max-width:100vw;
+    gap:5%;
+    padding:2%;
+}
+
+.container > div{
+    border: 2px ridge white;
+    
+}
+.container > div:nth-of-type(1){
+    width: 30%;
+    height: 80%;
+    background-color: rgb(12, 147, 10);
+    
+}
+
+.container > div:nth-of-type(2){
+    width:60%;
+    height: 80%;
+    background-color: rgb(10, 10, 10);
+}
+
+.image-container > .hint{
+    object-fit: cover;
+    height: 100%;
+    width:100%;
+}
